@@ -151,14 +151,15 @@ body {
     width: 100%;
     overflow-x: clip;
 }
-.text-justify{
+
+.text-justify {
     text-align: justify;
 }
 
 .container {
     max-width: 1300px;
 }
- 
+
 .container,
 .container-fluid,
 .container-lg,
@@ -1171,8 +1172,8 @@ header.main-header .header-sticky.active {
 ===================================== */
 
 .zigzag-timeline .timeline-item {
-    width: 38%;
-    /* reduced width */
+    width: 44%;
+    /* increased width to reach center */
     padding: 16px 20px;
     /* reduced padding */
     margin: 18px 0;
@@ -1206,11 +1207,11 @@ header.main-header .header-sticky.active {
 ===================================== */
 
 .zigzag-timeline .timeline-item.left {
-    left: 0;
+    left: 4.2%;
 }
 
 .zigzag-timeline .timeline-item.right {
-    left: 58%;
+    left: 51.9%;
 }
 
 /* =====================================
