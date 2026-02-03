@@ -791,7 +791,7 @@ progress {
 @media (min-width:576px) {
     .container,
     .container-sm {
-        max-width: 540px
+        max-width: 540px !important;
     }
 }
 
@@ -799,7 +799,7 @@ progress {
     .container,
     .container-md,
     .container-sm {
-        max-width: 720px
+        max-width: 720px !important;
     }
 }
 
@@ -808,7 +808,7 @@ progress {
     .container-lg,
     .container-md,
     .container-sm {
-        max-width: 960px
+        max-width: 960px !important;
     }
 }
 
@@ -818,7 +818,7 @@ progress {
     .container-md,
     .container-sm,
     .container-xl {
-        max-width: 1140px
+        max-width: 1140px !important;
     }
 }
 
@@ -829,7 +829,7 @@ progress {
     .container-sm,
     .container-xl,
     .container-xxl {
-        max-width: 1320px
+        max-width: 1320px !important;
     }
 }
 
