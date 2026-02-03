@@ -82,7 +82,10 @@
                     slidesPerView: 1,
                 },
                 991: {
-                    slidesPerView: 2,
+                    slidesPerView: 1,
+                },
+                1200: {
+                    slidesPerView: 1,
                 }
             }
         });
