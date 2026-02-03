@@ -2634,7 +2634,7 @@ header.main-header .header-sticky.active {
 
 .author-image {
     position: relative;
-    width: 42%;
+    width: 30%;
 }
 
 .author-image figure {
@@ -2675,7 +2675,7 @@ header.main-header .header-sticky.active {
 }
 
 .testimonial-content {
-    width: 58%;
+    width:70%;
     background: var(--white-color);
     align-content: center;
     padding: 30px;
