@@ -303,6 +303,159 @@
         </div>
         <!-- Scrolling Ticker End -->
     </div>
+
+
+    <!-- scroll-timeline 2 -->
+
+    <style>
+        .timeline2 {
+            width: 100%;
+            height: 299px;
+            padding: 20px;
+            position: relative;
+            box-sizing: border-box;
+            overflow: scroll;
+            display: flex;
+        }
+
+        .timieline-title {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .timeline-content {
+            max-width: 300px;
+            height: 110px;
+            padding: 20px;
+            flex-shrink: 0;
+            flex-grow: 0;
+            align-self: flex-start;
+            color: #FFF;
+          background: rgba(0, 0, 0, 0.72);
+    border: 1px solid rgba(187, 216, 12, 0.35);
+    border-radius: 14px;
+
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+            position: relative;
+           font-size: 14px;
+    line-height: 1.5;
+            margin-right: 10px;
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-content:before {
+            position: absolute;
+            width: calc(100% + 14px);
+            height: 3px;
+            top: calc(100% + 10px);
+         background: rgba(255, 255, 255, 0.25);
+        /* background: linear-gradient(to bottom, #bbd80c, #6aa300); */
+    transition: height 0.15s linear;
+            content: "";
+            left: -7px;
+            border-radius: 5px;
+        }
+
+        .timeline-content:after {
+            position: absolute;
+            width: 2px;
+            height: 25px;
+            top: 100%;
+            left: calc(50% - 10px);
+             background: #fff;
+            content: "";
+        }
+
+        .timeline-period {
+            position: absolute;
+            top: calc(100% + 25px);
+         
+                font-size: 14px;
+    font-weight: 600;
+    background: #bbd80c;
+    color: #000;
+            padding: 5px;
+            width: 100px;
+            text-align: center;
+            border-radius: 14px;
+            left: calc(50% - 60px);
+            box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .timeline-period:before {
+            width: 15px;
+            height: 15px;
+              background: #bbd80c;
+            border-radius: 50%;
+            content: "";
+            position: absolute;
+            top: -20px;
+            left: calc(50% - 6px);
+            z-index: 2;
+        }
+
+        .timeline-content:nth-child(even) {
+            align-self: flex-end;
+        }
+
+        .timeline-content:nth-child(even):before {
+            top: -15px;
+        }
+
+        .timeline-content:nth-child(even):after {
+            top: -25px;
+        }
+
+        .timeline-content:nth-child(even) .timeline-period {
+            top: -60px;
+        }
+
+        .timeline-content:nth-child(even) .timeline-period:before {
+            top: calc(100% + 2px);
+        }
+    </style>
+
+
+    <section class="scroll-timeline2 zigzag-timeline mb-4">
+        <div class="timeline2">
+            <div class="timeline-content">
+                <div class="timeline-period">1998</div>
+                1st Independent Indian CRO
+            </div>
+
+            <div class="timeline-content">
+                <div class="timeline-period">2001 - 2004</div>
+             DCGI approval (2001) for BE DCGI, ANVISA and USFDA 1st approvals were in 2004 for Navi-Mumbai site   
+            </div>
+
+            <div class="timeline-content">
+                <div class="timeline-period">2005 - 2009</div>
+            Ahmedabad and Vadodara started in 2009 onwards
+            </div>
+
+            <div class="timeline-content">
+                <div class="timeline-period">2013</div>
+               Started CDS Services
+            </div>
+
+            <div class="timeline-content">
+                <div class="timeline-period">2014</div>
+                Biologics Laboratory initiated in 2014
+            </div>
+
+            <div class="timeline-content">
+                <div class="timeline-period">2023</div>
+               Started Pre clinical services
+             </div>
+  
+        <div class="timeline-content">
+            <div class="timeline-period">2025</div>
+CRO-CT registration with CDSCO initiated Completed 140+ regulatory inspections         </div>
+    </div>
+      </div>
+    </section>
+
     <!-- Scrolling Ticker Section End -->
     <!-- ===============================
      ACCUTEST HISTORY TIMELINE
@@ -464,11 +617,11 @@
                             <div class="about-image-content">
                                 <ul>
                                     <li style="text-align: justify;">Driven by our core values of Accuracy,
-                                            Integrity, Quality, Safety, and Innovation, Accutest continues to advance
-                                            global healthcare by delivering dependable research outcomes and
-                                            strengthening the development of safe, effective, and accessible therapies
+                                        Integrity, Quality, Safety, and Innovation, Accutest continues to advance
+                                        global healthcare by delivering dependable research outcomes and
+                                        strengthening the development of safe, effective, and accessible therapies
                                     </li>
-                                    
+
                                 </ul>
                                 </ul>
                             </div>
@@ -808,7 +961,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Nirav Gandhi is a seasoned medical and clinical research
+                                                    <p class="text-justify">Dr. Nirav Gandhi is a seasoned medical and
+                                                        clinical research
                                                         leader with over 25 years of experience in the CRO and
                                                         pharmaceutical industry. An MBBS and MD in Pharmacology, he is
                                                         recognized for his strategic vision, scientific depth, and
@@ -876,7 +1030,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Anil Avhad is a seasoned clinician-scientist with extensive
+                                                    <p class="text-justify">Dr. Anil Avhad is a seasoned
+                                                        clinician-scientist with extensive
                                                         experience in global clinical development across NCEs, NBEs,
                                                         vaccines, complex generics, and BABE studies. He has led
                                                         programs from first-in-human to late-phase trials and brings
@@ -910,7 +1065,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Avdhoot Laud leads Accutest’s Corporate Quality Assurance and
+                                                    <p class="text-justify">Dr. Avdhoot Laud leads Accutest’s Corporate
+                                                        Quality Assurance and
                                                         Regulatory functions, overseeing the implementation and
                                                         maintenance of robust quality systems across all operations.
                                                         With extensive experience in the pharmaceutical industry, he has
@@ -948,7 +1104,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Naba is a Clinical Pharmacologist with 23+ years of
+                                                    <p class="text-justify">Dr. Naba is a Clinical Pharmacologist with
+                                                        23+ years of
                                                         extenssive experience across CROs, multinational pharma,
                                                         healthcare, and academics. With 15+ years in early and late
                                                         phase clinical trials, he has worked extensively as a medical
@@ -984,7 +1141,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Ravindra Gandham brings over 20 years of experience in clinical
+                                                    <p class="text-justify">Ravindra Gandham brings over 20 years of
+                                                        experience in clinical
                                                         research and global business development. He joined Accutest in
                                                         August 2025 and leads the Business Development function, driving
                                                         strategic growth and global partnerships.He has held senior
@@ -1018,7 +1176,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Jeetendra Donde is an accomplished HR leader with over two
+                                                    <p class="text-justify">Jeetendra Donde is an accomplished HR leader
+                                                        with over two
                                                         decades of experience across global Fortune 500 companies. He
                                                         specializes in HR strategy, talent management, performance
                                                         systems, and building strong, people-focused cultures. At
@@ -1055,7 +1214,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Anjan is a seasoned IT leader with 23 years of experience
+                                                    <p class="text-justify">Dr. Anjan is a seasoned IT leader with 23
+                                                        years of experience
                                                         across Pharmaceuticals, Healthcare, CROs, Life Sciences, and
                                                         Biotechnology. He specializes in digital transformation, IT
                                                         infrastructure modernization, regulatory compliance, and data
@@ -1094,7 +1254,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">With a Postgraduate Medical Education in Clinical Research from
+                                                    <p class="text-justify">With a Postgraduate Medical Education in
+                                                        Clinical Research from
                                                         Harvard Medical School and an MBA in Marketing, Ravindra
                                                         combines scientific insight with commercial acumen to deliver
                                                         transformative solutions in the clinical trials space.</p>
@@ -1120,7 +1281,8 @@
                                                     <img src="images/testimonial-quote.svg" alt="">
                                                 </div>
                                                 <div class="testimonial-info">
-                                                    <p class="text-justify">Dr. Shailesh Sonar is an experienced life sciences professional
+                                                    <p class="text-justify">Dr. Shailesh Sonar is an experienced life
+                                                        sciences professional
                                                         with deep expertise in biologics, biosimilars, immunogenicity,
                                                         and new drug discovery. He has held key scientific and
                                                         leadership roles at Glenmark, Dr. Reddy’s, BioGenomics, and
@@ -1201,7 +1363,7 @@
                             <h3>Quick Links</h3>
                             <ul>
                                 <li><a href="index.html">Home</a></li>
-                                <li><a href="/index.html#about">About us</a></li>
+                                <li><a href="/Accutest-Laboratories/index.html#about">About us</a></li>
                                 <li><a href="/capabilities.html">services</a></li>
                                 <li><a href="/Contact-Us.html">contact us</a></li>
                             </ul>
