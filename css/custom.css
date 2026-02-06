@@ -74,7 +74,9 @@
 /*** 	   02. General css		  ***/
 
 /************************************/
-
+.text-white{
+    color: #fff !important;
+}
 body {
     position: relative;
     font-family: var(--default-font);

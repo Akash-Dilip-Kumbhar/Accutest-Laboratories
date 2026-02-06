@@ -366,38 +366,44 @@ const yearList = document.querySelectorAll("#yearList div");
 
 /* --- UPDATE CONTENT WITH ANIMATION --- */
 function updateContent(index) {
+    if (!contentBox) return; // Guard clause
+
     contentBox.classList.add("fadeSlide");
 
     setTimeout(() => {
-        yearEl.textContent = milestones[index].year;
-        textEl.textContent = milestones[index].text;
+        if (yearEl) yearEl.textContent = milestones[index].year;
+        if (textEl) textEl.textContent = milestones[index].text;
 
         yearList.forEach(y => y.classList.remove("active"));
-        yearList[index].classList.add("active");
+        if (yearList[index]) yearList[index].classList.add("active");
 
         contentBox.classList.remove("fadeSlide");
     }, 300);
 }
 
 /* --- SCROLL TO CHANGE YEAR --- */
-window.addEventListener("wheel", function (event) {
-    if (event.deltaY > 0) currentIndex++;
-    else currentIndex--;
+if (contentBox) {
+    window.addEventListener("wheel", function (event) {
+        if (event.deltaY > 0) currentIndex++;
+        else currentIndex--;
 
-    if (currentIndex < 0) currentIndex = 0;
-    if (currentIndex > milestones.length - 1) currentIndex = milestones.length - 1;
+        if (currentIndex < 0) currentIndex = 0;
+        if (currentIndex > milestones.length - 1) currentIndex = milestones.length - 1;
 
-    updateContent(currentIndex);
-});
+        updateContent(currentIndex);
+    });
+}
 
 /* --- CLICK RIGHT SIDE YEARS --- */
-yearList.forEach(item => {
-    item.onclick = () => {
-        let index = item.getAttribute("data-index");
-        currentIndex = Number(index);
-        updateContent(currentIndex);
-    };
-});
+if (yearList.length > 0) {
+    yearList.forEach(item => {
+        item.onclick = () => {
+            let index = item.getAttribute("data-index");
+            currentIndex = Number(index);
+            updateContent(currentIndex);
+        };
+    });
+}
 /* Scrolling Ticker Section --*/
 const items = document.querySelectorAll(".timeline-item");
 
