@@ -427,7 +427,7 @@ body {
 }
 
 .section-row {
-    margin-bottom: 80px;
+    margin-bottom: 40px;
 }
 
 .section-row .section-title {
@@ -499,7 +499,7 @@ body {
 }
 
 .section-title h2 {
-    font-size: 46px;
+    font-size: 40px;
     font-weight: 400;
     line-height: 1.2em;
     letter-spacing: -0.02em;
@@ -1614,7 +1614,7 @@ header.main-header .header-sticky.active {
 /************************************/
 
 .our-services {
-    padding: 100px 0;
+    padding: 40px 0;
 }
 
 .service-item {
@@ -1627,6 +1627,10 @@ header.main-header .header-sticky.active {
     padding: 40px 35px;
     overflow: hidden;
 }
+.service-item:hover:before {
+    background: rgba(255, 255, 255, 0.05); 
+    backdrop-filter: blur(0px);
+}
 
 .service-item:before {
     content: '';
@@ -1635,7 +1639,10 @@ header.main-header .header-sticky.active {
     left: 0;
     right: 0;
     bottom: 0;
-    background: var(--white-color);
+      background: rgba(255, 255, 255, 0.30);
+    backdrop-filter: blur(4px); 
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 20px;
     width: 100%;
     height: 100%;
@@ -1645,7 +1652,9 @@ header.main-header .header-sticky.active {
 
 .service-item.active::before,
 .service-item:hover::before {
-    transform: translate(100%, -100%);
+     transform: translate(100%, -100%);
+    opacity: 0;
+    pointer-events: none;
 }
 
 .service-image {
@@ -1654,7 +1663,7 @@ header.main-header .header-sticky.active {
     left: 0;
     right: 0;
     bottom: 0;
-    opacity: 0;
+     opacity: 0.9;
     transition: all 0.4s ease-in-out;
 }
 
@@ -1670,7 +1679,7 @@ header.main-header .header-sticky.active {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(180deg, rgba(23, 44, 69, 0.00) 39.29%, var(--primary-color) 100%);
+     background: linear-gradient(180deg, rgba(23, 44, 69, 0) 40%, rgba(23, 44, 69, 0.8) 100%);
     width: 100%;
     height: 100%;
 }
@@ -1689,6 +1698,7 @@ header.main-header .header-sticky.active {
     flex-direction: column;
     justify-content: space-between;
     z-index: 2;
+    
 }
 
 .service-body-header {
@@ -1771,7 +1781,7 @@ header.main-header .header-sticky.active {
 .service-item:hover .service-content h3,
 .service-item.active .service-content p,
 .service-item:hover .service-content p {
-    color: var(--white-color);
+    color: var(--white-color) !important;
 }
 
 .section-footer-text {
@@ -1973,6 +1983,8 @@ header.main-header .header-sticky.active {
     border-radius: 20px;
 }
 
+
+
 /************************************/
 
 /*** 	  09. What We Do css	  ***/
@@ -2074,14 +2086,21 @@ header.main-header .header-sticky.active {
     z-index: 1;
 }
 
+
+
+
 .what-we-content {
     width: calc(100% - 70px);
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .what-we-content h3 {
     font-size: 20px;
     color: var(--white-color);
     margin-bottom: 10px;
+    text-align: left !important;
 }
 
 .what-we-content p {
@@ -2308,15 +2327,18 @@ header.main-header .header-sticky.active {
 .how-work-image-box {
     position: relative;
     margin-right: 15px;
+    height: 100%;
 }
 
 .how-work-image figure {
     display: block;
     border-radius: 20px;
+    height: 100%;
 }
 
 .how-work-image figure img {
     width: 100%;
+    height: 100%;
     aspect-ratio: 1 / 1.257;
     object-fit: cover;
     border-radius: 20px;
@@ -2328,16 +2350,16 @@ header.main-header .header-sticky.active {
     left: 40px;
     display: block;
     width: 290px;
-    background: var(--dark-divider-color);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: #ffffff0f;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     border-radius: 20px;
     padding: 25px;
     z-index: 1;
 }
 
 .how-work-image-box .satisfy-client-box .satisfy-client-content {
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .how-work-image-box .satisfy-client-box .satisfy-client-content h3 {
@@ -5000,7 +5022,7 @@ header.main-header .header-sticky.active {
     }
 
     .section-row {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
     }
 
     .section-row .section-title.section-title-center {
@@ -5086,7 +5108,7 @@ header.main-header .header-sticky.active {
     .about-us {
         background-size: 140px auto;
         background-position: right -10px bottom 50px;
-        padding: 50px 0;
+        padding: 40px 0;
     }
 
     .about-us .section-row .section-title {
@@ -6150,7 +6172,12 @@ header.main-header .header-sticky.active {
     .what-we-item {
         margin-bottom: 20px;
         padding-bottom: 20px;
+        display: flex;          /* This aligns children horizontally */
+    align-items: flex-start; /* Keeps the icon at the top if text is long */
+   
+    gap: 20px;
     }
+    
 
     .what-we-item .icon-box {
         margin-right: 10px;
@@ -6158,14 +6185,24 @@ header.main-header .header-sticky.active {
 
     .what-we-content {
         width: calc(100% - 60px);
+        flex-grow: 1;
+        
     }
 
     .what-we-content h3 {
         font-size: 18px;
+
+    font-weight: 700;
+    color: #cf1818;         /* White text as seen in screenshot */
+    margin: 0 0 5px 0;
+
     }
 
     .what-we-content p {
         font-size: 14px;
+        color: #e0e0e0;         /* Slightly muted white for the description */
+    margin: 0;
+    line-height: 1.5;
     }
 
     .intro-video-box {
