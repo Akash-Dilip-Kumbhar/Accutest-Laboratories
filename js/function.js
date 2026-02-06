@@ -1,17 +1,17 @@
-(function($) {
+(function ($) {
     "use strict";
 
     var $window = $(window);
     var $body = $('body');
 
     /* Preloader Effect */
-    $window.on('load', function() {
+    $window.on('load', function () {
         $(".preloader").fadeOut(600);
     });
 
     /* Sticky Header */
     if ($('.active-sticky-header').length) {
-        $window.on('resize', function() {
+        $window.on('resize', function () {
             setHeaderHeight();
         });
 
@@ -19,7 +19,7 @@
             $("header.main-header").css("height", $('header .header-sticky').outerHeight());
         }
 
-        $window.on("scroll", function() {
+        $window.on("scroll", function () {
             var fromTop = $(window).scrollTop();
             setHeaderHeight();
             var headerHeight = $('header .header-sticky').outerHeight()
@@ -35,7 +35,7 @@
     });
 
     if ($("a[href='#top']").length) {
-        $(document).on("click", "a[href='#top']", function() {
+        $(document).on("click", "a[href='#top']", function () {
             $("html, body").animate({
                 scrollTop: 0
             }, "slow");
@@ -93,8 +93,8 @@
 
     /* Skill Bar */
     if ($('.skills-progress-bar').length) {
-        $('.skills-progress-bar').waypoint(function() {
-            $('.skillbar').each(function() {
+        $('.skills-progress-bar').waypoint(function () {
+            $('.skillbar').each(function () {
                 $(this).find('.count-bar').animate({
                     width: $(this).attr('data-percent')
                 }, 2000);
@@ -262,7 +262,7 @@
         zoom: {
             enabled: true,
             duration: 300, // don't foget to change the duration also in CSS
-            opener: function(element) {
+            opener: function (element) {
                 return element.find('img');
             }
         }
@@ -272,7 +272,7 @@
     var $contactform = $("#contactForm");
     $contactform.validator({
         focus: false
-    }).on("submit", function(event) {
+    }).on("submit", function (event) {
         if (!event.isDefaultPrevented()) {
             event.preventDefault();
             submitForm();
@@ -285,7 +285,7 @@
             type: "POST",
             url: "form-process.php",
             data: $contactform.serialize(),
-            success: function(text) {
+            success: function (text) {
                 if (text === "success") {
                     formSuccess();
                 } else {
@@ -331,13 +331,13 @@
 
         if ($service_item.length) {
             $service_item.on({
-                mouseenter: function() {
+                mouseenter: function () {
                     if (!$(this).hasClass('active')) {
                         $service_item.removeClass('active');
                         $(this).addClass('active');
                     }
                 },
-                mouseleave: function() {
+                mouseleave: function () {
                     // Optional: Add logic for mouse leave if needed
                 }
             });
@@ -417,28 +417,41 @@ checkTimeline();
 
 /*BA/BE services in numbers--*/
 
+/*BA/BE services in numbers--*/
+
 const numbers = document.querySelectorAll(".value");
 
-numbers.forEach(num => {
-    const animate = () => {
-        const target = +num.getAttribute("data-target");
-        let count = +num.innerText;
+const counterObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const num = entry.target;
+            const animate = () => {
+                const target = +num.getAttribute("data-target");
+                let count = +num.innerText.replace(/,/g, ''); // Handle existing commas if any
 
-        const speed = 40;
-        const increment = Math.ceil(target / 100);
+                const speed = 40;
+                const increment = Math.ceil(target / 100);
 
-        if (count < target) {
-            num.innerText = count + increment;
-            setTimeout(animate, speed);
-        } else {
-            // Final formatting
-            if (target === 3500) num.innerText = "3,500+";
-            else if (target === 45000) num.innerText = "45,000+";
-            else num.innerText = target.toLocaleString();
+                if (count < target) {
+                    num.innerText = count + increment;
+                    setTimeout(animate, speed);
+                } else {
+                    // Final formatting
+                    if (target === 3500) num.innerText = "3,500+";
+                    else if (target === 45000) num.innerText = "45,000+";
+                    else num.innerText = target.toLocaleString();
+                }
+            };
+            animate();
+            observer.unobserve(num);
         }
-    };
+    });
+}, {
+    threshold: 0.5
+});
 
-    animate();
+numbers.forEach(num => {
+    counterObserver.observe(num);
 });
 
 
