@@ -1741,11 +1741,11 @@ header.main-header .header-sticky.active {
 ===================================== */
 
 .zigzag-timeline .timeline-item.left {
-    left: 0;
+    left: 10.3%;
 }
 
 .zigzag-timeline .timeline-item.right {
-    left: 58%;
+    left:51.6%;
 }
 
 /* =====================================
