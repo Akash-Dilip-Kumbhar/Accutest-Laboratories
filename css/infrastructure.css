@@ -1891,9 +1891,7 @@ header.main-header .header-sticky.active {
     color: var(--white-color);
 }
 
-.work-step-content {
-    width: calc(100% - 125px);
-}
+
 
 .work-step-content h3 {
     font-size: 20px;
