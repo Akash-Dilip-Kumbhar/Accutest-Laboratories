@@ -507,7 +507,7 @@ body {
 
 .section-title h2 {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.2em;
     letter-spacing: -0.02em;
     margin-bottom: 0;
@@ -880,7 +880,7 @@ header.main-header .header-sticky.active {
 
 
 .hero-content h1 {
-    font-size: 2rem;
+    font-size: 3rem;
     margin-bottom: 20px;
     text-align: left;
     /* Extra safe */

@@ -492,7 +492,7 @@ body {
 
 .section-title h2 {
    font-size: 46px;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 1.2em;
     letter-spacing: -0.02em;
     margin-bottom: 0;
@@ -1238,7 +1238,6 @@ header.main-header .header-sticky.active {
     border-left: 6px solid #003d71; 
     transition: opacity 0.3s ease;
     z-index: 2; /* Ensures it stays above the image */
-    min-height: 90px;
 }
 
 .card-title-bottom h3 {
@@ -1541,7 +1540,7 @@ header.main-header .header-sticky.active {
 }
 .why-choose-image img {
     width: 100%;
-    height: 900px; 
+    height: 800px; 
     object-fit: cover; 
     object-position: center; 
     border-radius: 20px;
