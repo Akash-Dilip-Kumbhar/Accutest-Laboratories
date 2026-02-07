@@ -2432,7 +2432,7 @@ header.main-header .header-sticky.active {
 }
 
 .work-step-content {
-    width: calc(100% - 125px);
+    width: 100%;
 }
 
 .work-step-content h3 {
