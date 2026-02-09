@@ -1243,8 +1243,9 @@ header.main-header .header-sticky.active {
 .card-title-bottom h3 {
     color: #ffffff;
     margin: 0;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
+      white-space: nowrap;
 }
 
 /* Hover Overlay (Slide up content) */
