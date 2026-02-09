@@ -5359,7 +5359,7 @@ header.main-header .header-sticky.active {
     }
 
     .author-image figure img {
-        aspect-ratio: 1 / 0.99;
+        aspect-ratio: auto;
     }
 
     .testimonial-content {

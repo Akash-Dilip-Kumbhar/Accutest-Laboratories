@@ -6160,7 +6160,11 @@ header.main-header .header-sticky.active {
     .why-choose-item {
         margin-bottom: 20px;
         padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
     }
+    .why-choose-item .why-choose-item-header {
+width: 100%;    }
 
     .why-choose-item-header .icon-box {
         width: 45px;
@@ -6177,7 +6181,7 @@ header.main-header .header-sticky.active {
     }
 
     .why-choose-item-content {
-        width: calc(50% - 10px);
+        width: 100%;
         padding-left: 10px;
         margin-left: 10px;
     }
@@ -6632,6 +6636,10 @@ header.main-header .header-sticky.active {
     .team-member-contact-box {
         padding: 20px;
     }
+    .expertise-title p{
+       margin-left: 10px;
+       margin-right: 10px;
+    }
 
     .contact-us-box {
         padding: 20px;
@@ -6795,7 +6803,7 @@ header.main-header .header-sticky.active {
 @media (max-width: 768px) {
     .stats-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: auto;
     }
 }
 
